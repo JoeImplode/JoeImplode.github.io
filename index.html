@@ -1,369 +1,482 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Joe Pickering</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<head>
+  <title>Joe Pickering</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="assets/headshotCircle.png">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 80000,
+    easing: 'ease-out',
+    once: true
+  });
+</script>
+<style>
+  @keyframes pageRise {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  body {
+    animation: pageRise 0.8s ease-out;
+  }
+
+  .bounce-in-right {
+    animation: bounce-in-right 2s ease infinite;
+  }
+
+  @keyframes bounce-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(200px);
+    }
+
+    60% {
+      opacity: 1;
+      transform: translateX(-30px);
+    }
+
+    80% {
+      transform: translateX(10px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes glideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .glide-in {
+    opacity: 0;
+    animation: glideIn 0.6s ease-out forwards;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @keyframes glow {
+    0% {
+      filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0.0));
+    }
+
+    50% {
+      filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.4));
+    }
+
+    100% {
+      filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0.0));
+    }
+  }
+
+  .glow {
+    animation: glow 10s ease-in-out infinite;
+  }
+</style>
 
 
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+<body class="bg-[#010203]">
 
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <div class="max-w-6xl mx-auto px-6 md:px-12">
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-
-    <link rel="stylesheet" href="css/aos.css">
-
-    <link rel="stylesheet" href="css/style.css">
-
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-
-  <div class="site-wrap">
-
-    <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div>
-
-
-    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
-
-      <div class="container">
-        <div class="row align-items-center">
-
-          <div class="col-6 col-xl-2">
-            <h1 class="mb-0 site-logo"><a href="index.html" class="mb-0">JOE PICKERING</a></h1>
-
-          </div>
-
-          <div class="col-12 col-md-10 d-none d-xl-block">
-            <nav class="site-navigation position-relative text-right" role="navigation">
-
-              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="#home-section" class="nav-link">Home</a></li>
-                <li >
-                  <a href="#about-section" class="nav-link">About Me</a>
-                </li>
-                <li><a href="#portfolio-section" class="nav-link">Portfolio</a></li>
-                <li><a href="#skills-section" class="nav-link">Skills</a></li>
-                  <li><h2><a href = https://www.linkedin.com/in/joe-pickering-044658197/ class="nav-link icon-linkedin"></a></h2></li>
-                  <li><h2><a href = https://github.com/JoeImplode class="nav-link icon-github"></a></h2></li>
-              </ul>
-            </nav>
-          </div>
-
-
-          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
-
-        </div>
-      </div>
-
-    </header>
-
-    <div class="site-blocks-cover overlay" style="background-image: url(images/Programming.jpg);" data-aos="fade" id="home-section">
-
-      <div class="container">
-        <div class="row align-items-center justify-content-center">
-
-          <div class="col-md-8 mt-lg-5 text-center">
-            <h1 class="text-uppercase mb-5" data-aos="fade-up">I'm an advanced C++ programmer with a keen interest in game and graphical programming.</h1>
-            <div data-aos="fade-up" data-aos-delay="100">
-              <a href="#about-section" class="btn smoothscroll btn-primary mr-2 mb-2">About Me</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <a href="#about-section" class="mouse smoothscroll">
-        <span class="mouse-icon">
-          <span class="mouse-wheel"></span>
-        </span>
-      </a>
-    </div>
-
-
-    <div class="site-section cta-big-image" id="about-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-12 text-center" data-aos="fade">
-            <h2 class="section-title mb-3">About Me</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
-            <figure class="circle-bg">
-            <img src="images/profile.png" alt="Image" class="img-fluid">
-            </figure>
-          </div>
-          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
-            <div class="mb-4">
-              <h3 class="h3 mb-4 text-black">Hi, I'm Joe!</h3>
-              <p>I'm an advanced C++ programmer and I'm currently undertaking my final year in BSc (Hons) Computer Games Programming at Staffordshire University. I really enjoy engine and graphical programming and I am currently learning advanced graphics in DirectX, low level games programming and I am also undertaking my final year project. I also have back-end web development experience in PHP and MySql for both education and personal projects.</p>
-            </div>
-            <p><a href="#portfolio-section" class="smoothscroll btn btn-primary">Check out my portfolio...</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <section class="site-section border-bottom" id="portfolio-section">
-      <div class="container">
-        <div class="row mb-5 justify-content-center">
-          <div class="col-md-8 text-center">
-            <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">Portfolio - Click each section to find out more!</h2>
-          </div>
-        </div>
-        <div class="row">
-
-
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="">
-            <div class="team-member">
-              <figure>
-                  <a href = "chaser.html">
-                <img src="images/Chaser.png" alt="Image" class="img-fluid">
-                    </a>
-              </figure>
-              <div class="p-3">
-                <h3>Chaser </h3>
-                  <h5>A C++ Pacman Clone created with a university framework called S2D.</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="team-member">
-              <figure>
-                  <a href = "mario.html">
-                <img src="images/Mario.png" alt="Image" class="img-fluid">
-                    </a>
-              </figure>
-              <div class="p-3">
-                <h3>Mario in SDL</h3>
-                  <h5>Mario Bros created in C++ and SDL utilising game programming principles.</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="team-member">
-              <figure>
-                  <a href = "openGl.html">
-                <img src="images/OpenGL.png" alt="Image" class="img-fluid">
-                    </a>
-              </figure>
-              <div class="p-3">
-                <h3>OpenGL 3D Scene</h3>
-                  <h5>A 3D scene created in OpenGL/C++ utilising lighting and object transformations.</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="team-member">
-              <figure>
-                  <a href = "oleCore.html">
-                <img src="images/OLECoreWebsite.png" alt="Image" class="img-fluid">
-                    </a>
-              </figure>
-              <div class="p-3">
-                <h3>OLE Core Website</h3>
-                  <h5>A group project website created for a mock client utilisng an e-commerce system.</h5>
-              </div>
-            </div>
-          </div>
-            <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="team-member">
-              <figure>
-                  <a href = "impFramework.html">
-                <img src="images/ImplodeFramework.png" alt="Image" class="img-fluid">
-                      </a>
-              </figure>
-              <div class="p-3">
-                <h3>IMP Framework</h3>
-                  <h5>An SDL framework I created in a group that allows quick SDL method calls for faster development.</h5>
-              </div>
+    <!---HERO SECTION-->
+    <section class="min-h-screen flex justify-center">
+      <div class="bg-[#090E16] min-h-screen w-full max-w-6xl pt-4 pb-10 px-[1.0rem] border border-white/10">
+        <div class="divide-y divide-white/10">
+          <nav class="flex justify-between items-center mb-5 px-12">
+            <!-- centred links -->
+            <div class="flex gap-10 text-white/70 text-sm ">
+              <a href="index.html" class="hover:text-white transition">Home</a>
+              <a href="#" class="hover:text-white transition">Projects</a>
+              <a href="#experience" class="hover:text-white transition">Experience</a>
+              <a id="contactCopy" class="hover:text-white transition">Contact</a>
             </div>
 
-          </div>
-            <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="team-member">
-              <figure>
-                <a href = "directX.html"><img src="images/directX.png" alt="Image" class="img-fluid" href = directX.html>
-                  </a>
-              </figure>
-              <div class="p-3">
-                <h3>DirectX 3D Scene</h3>
-                  <h5>A 3D scene created in DirectX utilising per pixel and per vertex shading, multiple shaders, a Debug camera and more.</h5>
-              </div>
-            </div>
-
-        </div>
-        <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="team-member">
-          <figure>
-            <a href = "BeInspired.html"><img src="images/beInspired.png" alt="Image" class="img-fluid" href = directX.html>
+            <!-- right-side actions -->
+            <div class="flex items-center gap-6">
+              <a href="https://github.com/JoeImplode" target="_blank">
+                <img src="assets/github.png" class="w-6 h-6 hover:opacity-80 transition glow">
               </a>
-          </figure>
-          <div class="p-3">
-            <h3>Be Inspired</h3>
-              <h5>A scheme run by Staffordshire University to help new entrepeneurs set up their business, mine being Implode Games.</h5>
-          </div>
+
+              <a href="https://www.linkedin.com/in/joe-pickering-044658197/" target="_blank">
+                <img src="assets/linkedin.png" class="w-6 h-6 hover:opacity-80 transition glow">
+              </a>
+
+              <a href="assets/JosephPickering_CV.pdf" class="text-white/80 hover:text-white transition glow">
+                Download CV
+              </a>
+            </div>
+
+          </nav>
+
+          <section class=" pb-5 pt-5">
+            <div class="flex justify-between items-start">
+              <div>
+                <h4 class="text-[#8ED9AB] text-1xl font-bold">WELCOME, I'M</h4>
+                <h1 class="text-white text-6xl font-bold">JOE PICKERING</h1>
+
+                <p class="text-white/70 text-xl pt-5">
+                  MODERN C++ ENGINEER • VULKAN PROGRAMMER
+                </p>
+
+                <p class="text-white/50 text-base  max-w-lg pt-10">
+                  I build high‑performance rendering systems, modern CMake workflows, and Vulkan‑based graphics
+                  projects with a focus on clarity, correctness, and clean engine architecture.
+                </p>
+
+                <div class="flex gap-10 pt-10">
+                  <div class="flex items-center gap-3">
+                    <img src="assets/iconLocation.png" class="w-5 h-5">
+                    <span class="text-white/70 text-sm">Southampton, UK</span>
+                  </div>
+
+                  <div class="flex items-center gap-3">
+                    <img src="assets/iconCode.png" class="w-7 h-7">
+                    <span class="text-white/70 text-sm">C++ 17/20 • Vulkan 1.4 • CMake</span>
+                  </div>
+
+                </div>
+              </div>
+
+              <div>
+                <img src="assets/headshotCircle.png" class="w-[20.0rem] h-[20.0rem] object-cover rounded-full ml-8 "
+                  style="animation: bounce-in-right 1s linear;">
+              </div>
+            </div>
+          </section>
+
+
+          <section id="experience" class="pt-4 pb-10">
+            <h3 class="text-white text-2xl font-semibold text-left tracking-wide pb-3">
+              PROFESSIONAL EXPERIENCE & EDUCATION
+            </h3>
+
+            <div class=" space-y-10">
+
+              <div class="bg-[#0F141D] rounded-xl p-6 border border-white/5">
+                <div class="divide-y divide-white/10">
+
+                  <!-- ENTRY 1 -->
+                  <div class="pb-8 p-6">
+                    <div class="flex items-start ">
+
+                      <!-- LEFT SIDE: logo + text horizontally -->
+                      <div class="flex items-start gap-4 w-80 pt-1 ">
+                        <img src="assets/bmtLogo.jpg" class="w-20 h-20 object-contain rounded-md">
+
+                        <div class="flex flex-col leading-relaxed">
+                          <h3 class="text-white text-lg font-semibold">BMT</h3>
+                          <h3 class="text-white text-lg font-semibold ">Simulation Software Engineer</h3>
+                          <p class="text-white/60 text-sm ">May 2026 — Present</p>
+                        </div>
+                      </div>
+
+                      <!-- VERTICAL BAR -->
+                      <div class="w-px bg-white/10 h-full"></div>
+
+                      <!-- RIGHT SIDE -->
+                      <div class="flex-1 text-white/50 text-base leading-relaxed">
+                        <ul class="list-disc list-inside space-y-1">
+                          <li>Built and maintained real‑time simulation systems for maritime training.</li>
+                          <li>Implemented deterministic update loops and performance‑critical C++ modules.</li>
+                          <li>Integrated physics, rendering, and input subsystems into legacy architectures.</li>
+                          <li>Refactored large codebases to improve clarity, maintainability, and stability.</li>
+                        </ul>
+                      </div>
+
+                    </div>
+                  </div>
+
+
+                  <!-- ENTRY 2 -->
+                  <div class="pb-8 p-6">
+                    <div class="flex items-start">
+
+                      <div class="flex items-start gap-4 w-80 pt-3">
+                        <img src="assets/datapathLogo.png" class="w-20 h-20 object-contain rounded-md">
+
+                        <div class="flex flex-col leading-relaxed">
+                          <h3 class="text-white text-lg font-semibold">DATAPATH</h3>
+                          <h3 class="text-white text-lg font-semibold ">Software Engineer</h3>
+                          <p class="text-white/60 text-sm ">Jul 2022 — Apr 2026</p>
+                        </div>
+                      </div>
+
+                      <div class="w-px bg-white/10 h-full"></div>
+
+                      <div class="flex-1 text-white/50 text-base leading-relaxed">
+                        <ul class="list-disc list-inside space-y-1">
+                          <li>Developed high‑performance C++ modules for video processing pipelines.</li>
+                          <li>Optimised memory usage and threading behaviour across multiple platforms.</li>
+                          <li>Collaborated with hardware teams to integrate GPU‑accelerated features.</li>
+                          <li>Improved CI/CD workflows and modernised build systems using CMake.</li>
+                        </ul>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <!-- ENTRY 3 -->
+                  <div class=" p-6">
+                    <div class="flex items-start">
+
+                      <div class="flex items-start gap-4 w-80 pt-2 ">
+                        <img src="assets/uniLogo.png" class="w-20 h-20 object-contain rounded-md">
+
+                        <div class="flex flex-col leading-relaxed">
+                          <h3 class="text-white text-lg font-semibold">Staffordshire University</h3>
+                          <h3 class="text-white text-lg font-semibold ">BSc Computer games programming</h3>
+                          <p class="text-white/60 text-sm ">2018 — 2022</p>
+                        </div>
+                      </div>
+
+                      <div class="w-px bg-white/10 h-full"></div>
+
+                      <div class="flex-1 text-white/50 text-base leading-relaxed">
+                        <ul class="list-disc list-inside space-y-1">
+                          <li>Graduated with a 2:1</li>
+                          <li>Implemented real time renderers utilising advanced graphics techniques.</li>
+                          <li>Undertook subjects such as low level programming and group projects.</li>
+                          <li>Completed a final year project showcasing compute shader physics</li>
+                        </ul>
+                      </div>
+
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+
+            </div>
+            <section class="pt-4">
+
+              <div class="bg-[#0F141D] rounded-xl p-2 border border-white/5">
+
+                <h3 class="text-white text-2xl font-semibold text-left tracking-wide">
+                  ⭐ FEATURED PROJECT
+                </h3>
+
+                <div class="flex items-end gap-3">
+
+                  <!-- LEFT BOX becomes tall rectangle -->
+                  <div
+                    class="w-[25rem] bg-[#0B111A] rounded-xl p-6 pb-[2rem] border border-white/5 flex flex-col h-full leading-relaxed mt-2">
+
+                    <h3 class="text-white text-xl font-semibold">
+                      Vulkan Compute Particle System
+                    </h3>
+
+                    <p class="text-white/60 text-base mt-3">
+                      A fully GPU‑driven particle simulation using Vulkan compute shaders,
+                      indirect draw calls, and SSBO‑based data pipelines. Designed for
+                      real‑time performance with millions of particles.
+                    </p>
+
+                    <div class="flex flex-wrap gap-3 pt-[5.5rem]">
+                      <span class="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-md">Vulkan</span>
+                      <span class="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-md">SLANG</span>
+                      <span class="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-md">Compute Shaders</span>
+                      <span class="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-md">Indirect Rendering</span>
+                      <span class="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-md">SSBO</span>
+                      <span class="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-md">C++20</span>
+                    </div>
+
+                    <div class="flex gap-2 mt-auto pt-5">
+                      <a href="#" class="px-5 py-2 bg-[#8ED9AB] text-black font-semibold rounded-md">
+                        VIEW PROJECT
+                      </a>
+                    </div>
+
+                  </div>
+
+                  <!-- RIGHT BOX becomes shorter rectangle -->
+                  <div class="flex-1 bg-[#0B111A] rounded-xl p-6 border border-white/5 flex flex-col items-center ">
+
+                    <div class="relative w-full h-48 rounded-lg overflow-hidden group">
+                      <img src="assets/particlesStatic.png" class="w-full h-full object-cover group-hover:hidden">
+                      <img src="assets/particles.gif" class="w-full h-full object-cover hidden group-hover:block">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mt-6 w-full text-center">
+
+                      <div class="bg-white/5 rounded-md py-3">
+                        <p class="text-white/60 text-xs">Simulation</p>
+                        <p class="text-white text-sm font-semibold">Compute Shader</p>
+                      </div>
+
+                      <div class="bg-white/5 rounded-md py-3">
+                        <p class="text-white/60 text-xs">Rendering</p>
+                        <p class="text-white text-sm font-semibold">Indirect Draw</p>
+                      </div>
+
+                      <div class="bg-white/5 rounded-md py-3">
+                        <p class="text-white/60 text-xs">Showcasing</p>
+                        <p class="text-white text-sm font-semibold">Physics on the compute shader</p>
+                      </div>
+
+                      <div class="bg-white/5 rounded-md py-3">
+                        <p class="text-white/60 text-xs">Performance</p>
+                        <p class="text-white text-sm font-semibold">Real‑Time</p>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+
+              </div>
+
+            </section>
+            <section id="skills" class="pt-4">
+              <div class="bg-[#0F141D] rounded-xl p-1 border items-centre border-white/5 gap-3 p-2">
+                <div class="flex items-center gap-3 pb-2">
+                  <img src="assets/iconCode.png" class="w-7 h-7">
+                  <h3 class="text-white text-2xl font-semibold text-left tracking-wide">
+                    SKILLS
+                  </h3>
+                </div>
+                <!-- Row 2: Skill boxes -->
+                <div class="grid grid-cols-1 md:grid-cols-4 ">
+                  <div class="bg-[#0B111A] rounded-xl p-2 border border-white/5">
+                    <div class="flex items-center gap-3 ">
+                      <img src="assets/cppLogo.png" class="w-7 h-7">
+                      <span class="text-white text-m font-semibold ">LANGUAGES</span>
+                    </div>
+                    <div class="flex-1 text-white/50 text-base leading-relaxed mt-2">
+                      <ul class="list-disc list-inside space-y-1 pt-2">
+                        <li>Modern C++ (17/20)</li>
+                        <li>CMake</li>
+                        <li>Python</li>
+                        <li>GLSL/SLANG</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="bg-[#0B111A] rounded-xl p-2 border border-white/5">
+                    <div class="flex items-center gap-3 ">
+                      <img src="assets/vulkanTriangle.png" class="w-7 h-7">
+                      <span class="text-white text-m font-semibold ">GRAPHICS & RENDERING</span>
+                    </div>
+                    <div class="flex-1 text-white/50 text-base leading-relaxed mt-2">
+                      <ul class="list-disc list-inside space-y-1 pt-2">
+                        <li>Vulkan</li>
+                        <li>OpenGL</li>
+                        <li>Compute Shaders</li>
+                        <li>Render Pass implementations</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="bg-[#0B111A] rounded-xl p-2 border border-white/5">
+                    <div class="flex items-center gap-3 ">
+                      <img src="assets/toolbox.png" class="w-7 h-7">
+                      <span class="text-white text-m font-semibold ">TOOLS & TECH</span>
+                    </div>
+                    <div class="flex-1 text-white/50 text-base leading-relaxed mt-2">
+                      <ul class="list-disc list-inside space-y-1 pt-2">
+                        <li>Address & Thread Sanitizers</li>
+                        <li>Git</li>
+                        <li>Google Test</li>
+                        <li>Devops</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="bg-[#0B111A] rounded-xl p-2 border border-white/5">
+                    <div class="flex items-center gap-3 ">
+                      <img src="assets/flash.png" class="w-7 h-7">
+                      <span class="text-white text-m font-semibold ">CURRENTLY EXPLORING...</span>
+                    </div>
+                    <div class="flex-1 text-white/50 text-base leading-relaxed mt-2">
+                      <ul class="list-disc list-inside space-y-1  pt-2">
+                        <li>Shadow Mapping</li>
+                        <li>PBR</li>
+                        <li>RayTracing</li>
+                        <li>Mesh Shaders</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </section>
+
         </div>
-    </div>
-    <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
-    <div class="team-member">
-      <figure>
-        <a href = "Implode Engine SFML.html"><img src="images/placeholder.png" alt="Image" class="img-fluid" href = directX.html>
-          </a>
-      </figure>
-      <div class="p-3">
-        <h3>Implode Engine in SFML</h3>
-          <h5>An entire game engine/framework including lighting, UI, scenene management. Created in SFML and lisenced for users to download.</h5>
-      </div>
-    </div>
-</div>
-<div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
-<div class="team-member">
-  <figure>
-    <a href = "voxel.html"><img src="images/voxel1.png" alt="Image" class="img-fluid" href = directX.html>
-      </a>
-  </figure>
-  <div class="p-3">
-    <h3>Voxel-O-Defence</h3>
-      <h5>A group Game Dev project where we developed a voxel-terrain-based tower defence game. Each group member had individual tasks to carry out and complete.</h5>
+    </section>
+
+    </section>
+
+
+    </section>
+
   </div>
-</div>
-</div>
-          </div>
-        </div>
-      </section>
-    <section class="site-section border-bottom" id="skills-section">
-      <div class="container">
-        <div class="row mb-5 justify-content-center">
-          <div class="col-md-8 text-center">
-            <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">Skills</h2>
-          </div>
-        </div>
-        <div class="row">
 
+  </div>
 
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="">
-            <div class="team-member">
-              <div class="p-6">
-                <h1>C++</h1>
+  </div>
+  </section>
+  </div>
+  <div id="toast"
+    class="fixed bottom-6 right-6 bg-white text-black px-4 py-2 rounded-md shadow-lg opacity-0 pointer-events-none transition-opacity duration-300">
+    Email copied to clipboard!
+  </div>
+</body>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('glide-in');
+      }
+    });
+  }, { threshold: 0.2 });
 
-              </div>
-            </div>
-          </div>
+  document.querySelectorAll('section').forEach(section => {
+    observer.observe(section);
+  });
 
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="">
-            <div class="team-member">
-              <div class="p-6">
-                <h1>DirectX</h1>
+  const contactLink = document.getElementById('contactCopy');
+  const toast = document.getElementById('toast');
 
-              </div>
-            </div>
-          </div>
+  contactLink.addEventListener('click', () => {
+    const email = "joe_pickering5@hotmail.com"; // 
 
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="">
-            <div class="team-member">
-              <div class="p-6">
-                <h1>OpenGL</h1>
+    navigator.clipboard.writeText(email).then(() => {
+      toast.style.opacity = "1";
 
-              </div>
-            </div>
-          </div>
+      setTimeout(() => {
+        toast.style.opacity = "0";
+      }, 2000);
+    });
+  });
+</script>
 
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="">
-            <div class="team-member">
-              <div class="p-6">
-                <h1>PHP</h1>
-
-              </div>
-            </div>
-          </div>
-            <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="">
-            <div class="team-member">
-              <div class="p-6">
-                <h1>C#</h1>
-              </div>
-            </div>
-          </div>
-            <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="">
-            <div class="team-member">
-              <div class="p-6">
-                <h1>Teamwork</h1>
-              </div>
-            </div>
-          </div>
-            <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="">
-            <div class="team-member">
-              <div class="p-6">
-                <h1>Problem Solving</h1>
-              </div>
-            </div>
-          </div>
-            <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="">
-            <div class="team-member">
-              <div class="p-6">
-                <h1>Communication</h1>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      </section>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row pt-5 mt-5 text-center">
-          <div class="col-md-12">
-              <p>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
-
-          </div>
-
-        </div>
-        </div><!-- .site-wrap -->
-      </footer>
-      </div>
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.countdown.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
-  <script src="js/jquery.sticky.js"></script>
-  <script src="js/isotope.pkgd.min.js"></script>
-
-
-  <script src="js/main.js"></script>
-
-
-
-  </body>
 </html>
