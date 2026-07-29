@@ -10,9 +10,6 @@
     }
 }
 
-body {
-    animation: pageRise 0.8s ease-out;
-}
 
 .bounce-in-right {
     animation: bounce-in-right 2s ease infinite;
