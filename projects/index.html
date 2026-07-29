@@ -1,0 +1,62 @@
+<html>
+<!doctype html>
+
+<head>
+    <title>Joe Pickering</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="/assets/headshotCircle.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel=stylesheet href="/projects/projectPageStyle.css">
+</head>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 80000,
+        easing: 'ease-out',
+        once: true
+    });
+</script>
+
+<body class="body">
+    <div class="inner--body--content">
+        <div id="navbar"></div>
+        <script>
+            fetch('/partials/navbar.partial')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar').innerHTML = html;
+                });
+        </script>
+        <div class="projects-header">
+            <h1>Take a look at some of my projects!</h1>
+            <p>Here's a selection of work that I've been building</p>
+            <p>Click each one to find out more!</p>
+        </div>
+        <section id="ComputeParticles" class="project-preview">
+            <div class="project-preview">
+                <a href="/projects/vulkan-particle-system.html" class="project-link">
+                    <div class="project-preview__media">
+                        <img src="/assets/particlesStatic.png" alt="Vulkan Particle System">
+                    </div>
+                </a>
+            </div>
+            <div class="project-preview__text">
+                <h2>Vulkan Compute Shader Particle System</h2>
+                <p>Languages: C++ 20, Vulkan, SLANG, CMake</p>
+            </div>
+        </section>
+        <h1 style="color:white;text-align: center; padding-top: 2%">More projects coming soon!</h1>
+        <div class=footer>
+
+            <p>© 2026 Joe Pickering. All rights reserved.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<html>
+<!doctype html>
+
+<head>
+    <title>Joe Pickering</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="/assets/headshotCircle.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel=stylesheet href="/projects/projectStyle.css">
+</head>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 80000,
+        easing: 'ease-out',
+        once: true
+    });
+</script>
+
+<body class="body">
+    <div class="inner--body--content">
+        <div id="navbar"></div>
+        <script>
+            fetch('/partials/navbar.partial')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar').innerHTML = html;
+                });
+        </script>
+        <div class=footer>
+            <p>© 2026 Joe Pickering. All rights reserved.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
