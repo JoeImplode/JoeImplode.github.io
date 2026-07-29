@@ -1,0 +1,1 @@
+Need to collapse horribly implemented divs per section into a reusable theme which is modular and works in another page for the projects, devlog and project page.
