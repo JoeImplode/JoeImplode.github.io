@@ -64,3 +64,46 @@
     background: rgba(13, 13, 13, 0.9);
     z-index: -1;
 }
+
+.featured-project {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.featured-project__video {
+    width: 100%;
+    height: 60vh;
+    border-radius: 3rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.featured-project__video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0, 0.6);
+    border-radius: inherit;
+    border-color: white;
+}
+
+.featured-project__overlay-text {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+
+    color: #fff;
+    z-index: 2;
+
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    /* soft shadow around the text block */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+
+    text-align: center;
+}

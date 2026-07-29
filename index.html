@@ -168,83 +168,27 @@
     </section>
 
     <section class="section">
+      <h3 class="text-white text-2xl font-semibold text-center tracking-wide pb-3">
+        FEATURED PROJECTS
+      </h3>
 
-      <div class=" rounded-xl p-2 ">
-
-        <h3 class="text-white text-2xl font-semibold text-left tracking-wide">
-          FEATURED PROJECT
-        </h3>
-
-        <div class="flex items-end gap-3 border-white/5">
-
-          <!-- LEFT BOX becomes tall rectangle -->
-          <div class="w-[25rem] rounded-xl p-6 pb-[2rem] flex flex-col h-full leading-relaxed mt-2">
-
-            <h3 class="text-white text-xl font-semibold">
-              Vulkan Compute Particle System
-            </h3>
-
-            <p class="text-white/60 text-base mt-3">
-              A fully GPU‑driven particle simulation using Vulkan compute shaders,
-              indirect draw calls, and SSBO‑based data pipelines. Designed for
-              real‑time performance with millions of particles.
+      <div class="featured_project">
+        <div class="featured-project__video">
+          <video autoplay muted loop playsinline>
+            <source src="/assets/particles.mp4" type="video/mp4">
+          </video>
+          <div class="featured-project__overlay-text">
+            <h2>Vulkan Compute Particle System - C++20/Vulkan/SLANG</h2>
+            <p>
+              A fully GPU‑driven particle simulation built with Vulkan compute shaders,
+              indirect draw calls, and a custom SSBO pipeline. Designed for real‑time
+              performance with over one million particles.
             </p>
 
-            <div class="flex flex-wrap gap-3 pt-[5.5rem]">
-              <span class="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-md">Vulkan</span>
-              <span class="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-md">SLANG</span>
-              <span class="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-md">Compute Shaders</span>
-              <span class="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-md">Indirect Rendering</span>
-              <span class="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-md">SSBO</span>
-              <span class="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-md">C++20</span>
-            </div>
-
-            <div class="flex gap-2 mt-auto pt-5">
-              <a href="#" class="px-5 py-2 bg-[#8ED9AB] text-black font-semibold rounded-md">
-                VIEW PROJECT
-              </a>
-            </div>
-
           </div>
-
-          <!-- RIGHT BOX becomes shorter rectangle -->
-          <div class="flex-1  rounded-xl p-6  flex flex-col items-center ">
-
-            <div class="relative w-full h-48 rounded-lg overflow-hidden group">
-              <img src="assets/particlesStatic.png" class="w-full h-full object-cover">
-            </div>
-
-            <div class="grid grid-cols-2 gap-4 mt-6 w-full text-center">
-
-              <div class="bg-white/5 rounded-md py-3">
-                <p class="text-white/60 text-xs">Simulation</p>
-                <p class="text-white text-sm font-semibold">Compute Shader</p>
-              </div>
-
-              <div class="bg-white/5 rounded-md py-3">
-                <p class="text-white/60 text-xs">Rendering</p>
-                <p class="text-white text-sm font-semibold">Indirect Draw</p>
-              </div>
-
-              <div class="bg-white/5 rounded-md py-3">
-                <p class="text-white/60 text-xs">Showcasing</p>
-                <p class="text-white text-sm font-semibold">Physics on the compute shader</p>
-              </div>
-
-              <div class="bg-white/5 rounded-md py-3">
-                <p class="text-white/60 text-xs">Performance</p>
-                <p class="text-white text-sm font-semibold">Real‑Time</p>
-              </div>
-
-            </div>
-
-          </div>
-
         </div>
 
-
       </div>
-
     </section>
 
     <section id="skills" class="section">
