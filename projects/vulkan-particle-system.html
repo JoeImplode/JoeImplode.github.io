@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/animations.css">
-    <link rel=stylesheet href="/projects/projectStyle.css">
+    <link rel="stylesheet" href="/projects/projectStyle.css">
+    <link rel="stylesheet" href="/projects/projectTemplate.css">
 </head>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -32,7 +33,51 @@
                     document.getElementById('navbar').innerHTML = html;
                 });
         </script>
-        <h1 style="color:white;text-align: center; padding-top: 2%">Page in development... bruh</h1>
+        <section id="project-title">
+
+            <div class="hero-row">
+                <div class="hero-text">
+                    <h1>
+                        Vulkan Compute Shader Particle System
+                    </h1>
+                    <p>
+                        A fully GPU‑driven particle simulation built with Vulkan compute shaders, indirect draw calls,
+                        and a custom SSBO pipeline. Designed for real‑time performance with over one million particles.
+                    </p>
+                    <h3>
+                        C++20 / Vulkan / CMake / SLANG
+                    </h3>
+                    <p>
+                        Version 1.0 completed 26/07/26
+                    </p>
+                </div>
+
+                <img src="/assets/particlesStatic.png" class="hero-image">
+            </div>
+        </section>
+        <section id="Overview" class="project-overview">
+            <p>
+                This project is a GPU‑driven particle simulation built using Vulkan compute shaders, re‑implemented from
+                Sascha Willems’ example as a learning exercise. It focuses on data‑parallel updates, explicit
+                synchronisation, and efficient buffer management for large particle workloads.
+            </p>
+
+        </section>
+
+        <section id="Story" class="project-story">
+            <p>
+                It's also the first piece in my graphics programming portfolio (hooray!), and I wanted it to demonstrate
+                real Vulkan
+                skills rather than rely on simplified patterns. I initially tried implementing a shadow‑mapping example
+                from the Vulkan 3D Rendering Cookbook, but the sample used forced queue‑submission synchronisation,
+                which isn’t representative of real Vulkan usage. Switching to the compute shader example gave me a
+                clearer understanding of resource binding, synchronisation, and dispatch behaviour, and it became a
+                solid foundation for the rest of my portfolio.
+            </p>
+
+        </section>
+
+        <h1 style="color:white;text-align: center; padding-top: 2%">More content on the way...</h1>
         <div class=footer>
             <p>© 2026 Joe Pickering. All rights reserved.</p>
         </div>

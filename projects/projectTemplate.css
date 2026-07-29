@@ -1,0 +1,70 @@
+.hero-row {
+    padding-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 52%;
+}
+
+.hero-text h1 {
+    font-size: 3.0rem;
+    font-weight: 800;
+    color: white;
+}
+
+.hero-text p {
+    font-size: 1.0rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+}
+
+.hero-text h3 {
+    font-size: 1.2rem;
+    color: rgba(77, 170, 92, 0.7);
+    font-style: italic;
+}
+
+.hero-image {
+    max-width: 40%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(142, 217, 154, 0.4);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+
+.project-overview {
+    padding-top: 12%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: flex-start;
+}
+
+.project-overview p {
+    max-width: 65%;
+    font-size: 1.25rem;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.project-story {
+    padding-top: 12%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: flex-start;
+}
+
+.project-story p {
+    max-width: 70%;
+    font-size: 1.25rem;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.8);
+}
