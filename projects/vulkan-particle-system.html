@@ -51,11 +51,9 @@
                         Version 1.0 completed 26/07/26
                     </p>
                 </div>
-
-                <img src="/assets/particlesStatic.png" class="hero-image">
             </div>
         </section>
-        <section id="Overview" class="project-overview">
+        <section id="Overview" class="project-section">
             <p>
                 This project is a GPU‑driven particle simulation built using Vulkan compute shaders, re‑implemented from
                 Sascha Willems’ example as a learning exercise. It focuses on data‑parallel updates, explicit
@@ -64,7 +62,16 @@
 
         </section>
 
-        <section id="Story" class="project-story">
+        <section id="Gallery" class="project-section">
+            <div class="featured-project__video">
+                <video autoplay muted loop playsinline>
+                    <source src="/assets/particles.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        </section>
+
+        <section id="Story" class="project-section">
             <p>
                 It's also the first piece in my graphics programming portfolio (hooray!), and I wanted it to demonstrate
                 real Vulkan
@@ -74,10 +81,27 @@
                 clearer understanding of resource binding, synchronisation, and dispatch behaviour, and it became a
                 solid foundation for the rest of my portfolio.
             </p>
-
         </section>
 
-        <h1 style="color:white;text-align: center; padding-top: 2%">More content on the way...</h1>
+        <section id="TechnicalBreakdown" class="project-section">
+            <p>
+                More on the way...
+            </p>
+        </section>
+
+        <section id="Performance/Results" class="project-section">
+        </section>
+
+        <section id="Future Improvements" class="project-section">
+            <p>Future Improvements:</p>
+        </section>
+        <section class="project-section">
+            <ul class="project-future">
+                <li>- Utilise separate compute queue to run async dispatch commands</li>
+                <li>- Upgrade into a galaxy simulation which changes particles to light emitting stars</li>
+                <li>- Configurable dispatch options and user interactivity</li>
+            </ul>
+        </section>
         <div class=footer>
             <p>© 2026 Joe Pickering. All rights reserved.</p>
         </div>
