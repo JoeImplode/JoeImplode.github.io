@@ -31,6 +31,20 @@
                 .then(response => response.text())
                 .then(html => {
                     document.getElementById('navbar').innerHTML = html;
+
+                    const contactLink = document.getElementById('contactCopy');
+                    const toast = document.getElementById('toast');
+
+                    contactLink.addEventListener('click', () => {
+                        const email = "joe_pickering5@hotmail.com";
+
+                        navigator.clipboard.writeText(email).then(() => {
+                            toast.style.opacity = "1";
+                            setTimeout(() => {
+                                toast.style.opacity = "0";
+                            }, 2000);
+                        });
+                    });
                 });
         </script>
         <section id="project-title">
@@ -42,7 +56,7 @@
                     </h1>
                     <p>
                         A fully GPU‑driven particle simulation built with Vulkan compute shaders, indirect draw calls,
-                        and a custom SSBO pipeline. Designed for real‑time performance with over one million particles.
+                        and a custom SSBO pipeline. Designed for real‑time performance and ping pong buffer management.
                     </p>
                     <h3>
                         C++20 / Vulkan / CMake / SLANG
@@ -50,13 +64,24 @@
                     <p>
                         Version 1.0 completed 26/07/26
                     </p>
+                    <div class="flex justify-center">
+                        <a href="https://github.com/JoeImplode/VKComputeShader"
+                            class="inline-block max-w-fit bg-black text-white px-6 py-4 rounded-md text-lg font-medium hover:bg-gray-800 transition">
+                            View GitHub Page
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
         <section id="Overview" class="project-section">
             <p>
                 This project is a GPU‑driven particle simulation built using Vulkan compute shaders, re‑implemented from
-                <b>Sascha Willems’</b> example as a learning exercise. It focuses on data‑parallel updates, explicit
+                <a href="https://docs.vulkan.org/tutorial/latest/11_Compute_Shader.html"><b
+                        style="color:rgb(9, 169, 218)"><u>Sascha Willems’ example</u></b></a> as a learning exercise. It
+                focuses
+                on
+                data‑parallel updates,
+                explicit
                 synchronisation, and efficient buffer management for large particle workloads.
             </p>
 
@@ -64,9 +89,11 @@
 
         <section id="Gallery" class="project-section">
             <div class="featured-project__video">
-                <video autoplay muted loop playsinline>
-                    <source src="/assets/particles.mp4" type="video/mp4">
-                </video>
+                <a href="https://github.com/JoeImplode/VKComputeShader">
+                    <video autoplay muted loop playsinline>
+                        <source src="/assets/particles.mp4" type="video/mp4">
+                    </video>
+                </a>
             </div>
 
         </section>
@@ -263,7 +290,9 @@
             </p>
             <h4 class="tech-breakdown-subsection">The compute shader</h4>
             <p> Each frame we bind the compute pipeline and dispatch our compute work. The compMain function looks as
-                follows. (Courtesy of Sasha Willems' vulkan compute example)</p>
+                follows. <a href="https://docs.vulkan.org/tutorial/latest/_attachments/31_shader_compute.comp"
+                    target="_blank"><b style="color:rgb(9, 169, 218)"><u>(based on Sascha Willems' vulkan compute
+                            example)</u></a></p></b>
             <pre><code>
         [shader( "compute" )]
         [numthreads( 256, 1, 1 )]
@@ -384,6 +413,12 @@
             <p>© 2026 Joe Pickering. All rights reserved.</p>
         </div>
     </div>
+    <div id="toast"
+        class="fixed bottom-6 right-6 bg-white text-black px-4 py-2 rounded-md shadow-lg opacity-0 pointer-events-none transition-opacity duration-300">
+        Email copied to clipboard!
+    </div>
+    <script src="/js/main.js">
+    </script>
 
 </body>
 

@@ -30,6 +30,20 @@
         .then(response => response.text())
         .then(html => {
           document.getElementById('navbar').innerHTML = html;
+
+          const contactLink = document.getElementById('contactCopy');
+          const toast = document.getElementById('toast');
+
+          contactLink.addEventListener('click', () => {
+            const email = "joe_pickering5@hotmail.com";
+
+            navigator.clipboard.writeText(email).then(() => {
+              toast.style.opacity = "1";
+              setTimeout(() => {
+                toast.style.opacity = "0";
+              }, 2000);
+            });
+          });
         });
     </script>
 
@@ -174,12 +188,13 @@
 
       <div class="featured_project">
         <div class="featured-project__video">
-          <video autoplay muted loop playsinline>
-            <source src="/assets/particles.mp4" type="video/mp4">
-          </video>
+          <a href="/projects/vulkan-particle-system.html">
+            <video autoplay muted loop playsinline>
+              <source src="/assets/particles.mp4" type="video/mp4">
+            </video>
+          </a>
           <div class="featured-project__overlay-text">
             <h2>Vulkan Compute Particle System - C++20/Vulkan/SLANG</h2>
-
           </div>
         </div>
 
@@ -261,13 +276,12 @@
         <p>© 2026 Joe Pickering. All rights reserved.</p>
       </div>
   </div>
-
   <div id="toast"
     class="fixed bottom-6 right-6 bg-white text-black px-4 py-2 rounded-md shadow-lg opacity-0 pointer-events-none transition-opacity duration-300">
     Email copied to clipboard!
   </div>
-
-  <script src="/js/main.js"></script>
+  <script src="/js/main.js">
+  </script>
 </body>
 
 
