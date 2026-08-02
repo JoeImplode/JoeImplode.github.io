@@ -90,7 +90,6 @@
     color: rgba(255, 255, 255, 1.0);
     font-size: 1.7rem;
     text-align: left;
-    align-self: flex-start;
     margin-right: auto;
 }
 
@@ -105,4 +104,42 @@ pre {
     font-family: monospace;
     font-size: 0.9rem;
     box-sizing: border-box;
+}
+
+.toc-list {
+    padding-top: 1rem;
+    list-style: none;
+}
+
+.hero-text h3 {
+    font-size: 1.2rem;
+    color: rgba(77, 170, 92, 0.7);
+    font-style: italic;
+}
+
+.toc-sublist {
+    list-style: none;
+    margin: 0.25rem 0 0 1.5rem;
+}
+
+.toc-list a {
+    text-decoration: none;
+    color: rgb(30, 194, 71);
+}
+
+.toc-list a:hover {
+    color: #fff;
+}
+
+.toc-list li::before {
+    content: "•";
+    margin-right: 0.5rem;
+    color: #888;
+    /* match your theme */
+}
+
+.toc-sublist li::before {
+    content: "›";
+    margin-right: 0.5rem;
+    color: #666;
 }

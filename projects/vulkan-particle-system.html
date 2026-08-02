@@ -108,7 +108,24 @@
                 behaviour, and it became a solid foundation for the rest of my portfolio.
             </p>
         </section>
-
+        <section id="TableOfContents" class="tech-breakdown">
+            <h1 class="tech-breakdown-title">Table of Contents</h1>
+            <ul class="toc-list">
+                <li>
+                    <a href="#TechnicalBreakdown">Technical Breakdown</a>
+                    <ul class="toc-sublist">
+                        <li><a href="#Why utilise compute shaders?">So why utilise compute shaders?</a></li>
+                        <li><a href="#ComputeSpace">Compute Space</a></li>
+                        <li><a href="#ParticleSystem">The particle system</a></li>
+                        <li><a href="#Resources">Resources</a></li>
+                        <li><a href="#ComputeShader">The compute shader</a></li>
+                        <li><a href="#Synchronisation">Synchronisation</a></li>
+                    </ul>
+                </li>
+                <li><a href="#What I Learned">What I learned</a></li>
+                <li><a href="#Future Improvements">Future improvements</a></li>
+            </ul>
+        </section>
         <section id="TechnicalBreakdown" class="tech-breakdown">
             <h3 class="tech-breakdown-title">
                 Technical Breakdown
@@ -118,7 +135,7 @@
                 rendering, the GPU resources involved and how they are structured, and the implementation that drives
                 the particle behaviour.
             </p>
-            <h4 class="tech-breakdown-subsection">So why utilise compute shaders?</h4>
+            <h4 id="Why utilise compute shaders?" class="tech-breakdown-subsection">So why utilise compute shaders?</h4>
             <p>Many operations in computer science benefit from parallelism, especially when working with large datasets
                 where each element performs a calculation independently. Although a CPU can run multiple logical threads
                 across several physical cores, its execution model is still fundamentally sequential, which becomes
@@ -135,7 +152,7 @@
                 understand compute space...
             </p>
             <p style="padding-top:2rem"> </p>
-            <h4 class="tech-breakdown-subsection">Compute Space</h4>
+            <h4 id="ComputeSpace" class="tech-breakdown-subsection">Compute Space</h4>
             <img src="/assets/ComputeSpace.png" alt="Vulkan Particle System">
             <p>
                 Compute space is an <b>abstraction</b> consisting of 2 fundamentals: "Work Groups" and "invocations".
@@ -177,7 +194,7 @@
                 schedules the resulting pool.
             </p>
             <p style="padding-top:2rem"><b>With that context explained we can explore the rest of the project!</b></p>
-            <h4 class="tech-breakdown-subsection">The particle system</h4>
+            <h4 id="ParticleSystem" class="tech-breakdown-subsection">The particle system</h4>
             <p style="padding-bottom:2rem">The particle system is relatively simple, each particle has a 2D position,
                 velocity and colour. As this
                 project is to explore the compute shader, we needn't care about realism, the particle just needs to
@@ -194,7 +211,7 @@
                 };
             </code></pre>
             </p>
-            <h4 class="tech-breakdown-subsection">Resources</h4>
+            <h4 id="Resources" class="tech-breakdown-subsection">Resources</h4>
             <p style="padding-bottom:2rem">Compute shaders need to arbitrarily read from and write to buffers, vulkan
                 offers shader storage buffer
                 objects (SSBO's) for such a purpose. SSBO's can also hold massive amounts of data, and flexible arrays
@@ -233,6 +250,10 @@
                 themselves never change, but the way they are bound to the shader does. This pattern is known as
                 ping‑pong buffering.
             </p>
+            <p style="padding-top:1rem">
+                Below shows a diagram of our ping-pong buffer setup.
+            </p>
+            <img src="/assets/pingpongBuffer.png" alt="Vulkan Particle System">
 
             <p style="padding-top:2rem">On the application side, this behaviour is implemented by binding two storage
                 buffers in the descriptor set layout:</p>
@@ -288,7 +309,7 @@
                 <code>RWStructuredBuffer</code> inside the shader. The buffers themselves remain fixed; only their roles
                 change from frame to frame.
             </p>
-            <h4 class="tech-breakdown-subsection">The compute shader</h4>
+            <h4 id="ComputeShader" class="tech-breakdown-subsection">The compute shader</h4>
             <p> Each frame we bind the compute pipeline and dispatch our compute work. The compMain function looks as
                 follows. <a href="https://docs.vulkan.org/tutorial/latest/_attachments/31_shader_compute.comp"
                     target="_blank"><b style="color:rgb(9, 169, 218)"><u>(based on Sascha Willems' vulkan compute
@@ -331,7 +352,7 @@
                 particles.
             </p>
 
-            <h4 class="tech-breakdown-subsection">Synchronisation</h4>
+            <h4 id="Synchronisation" class="tech-breakdown-subsection">Synchronisation</h4>
             <p>Synchronisation is one of Vulkan’s core concepts, and it’s essential for ensuring that the compute shader
                 runs correctly and that the data it reads and writes is properly ordered. In this project,
                 synchronisation happens at two levels. First, we need to ensure correct ordering between command buffer
