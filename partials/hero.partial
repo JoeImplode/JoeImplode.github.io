@@ -19,7 +19,7 @@
 
                 <p class="text-white/50 text-xl leading-relaxed max-w-2xl mb-3 pt-12">
                   I build high‑performance rendering systems, modern CMake workflows, and Vulkan‑based graphics
-                  projects with a focus on clarity, correctness, and clean engine architecture.
+                  projects with a focus on clarity, correctness, and clean-modular architecture.
                 </p>
 
                 <div class="flex gap-14 mb-12 pt-12">
